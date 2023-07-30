@@ -1,5 +1,3 @@
-HTTPS-through-an-SMTP-tunnel
-
 This project was developed in the course of an internship at the Fernuni in Hagen. The task required giving a client the ability to access the Internet (http and https) in a network, although this is only allowed to a special computer (the server) in that network.
 
 Setting up the lab environment: 
