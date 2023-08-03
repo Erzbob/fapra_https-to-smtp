@@ -1,4 +1,10 @@
-This project was developed in the course of an internship at the Fernuni in Hagen. The task required giving a client the ability to access the Internet (http and https) in a network, although this is only allowed to a special computer (the server) in that network.
+This project was developed in the course of an internship at the Fernuni Hagen. The task required giving a client the ability to access the Internet (http and https) in a network, although this is only allowed to a special computer (the server) in that network. In a broader sense, it should be possible to establish an SMTP based tunnel from the client machine in network A to a server in network B. The scenario is as follows: 
+- Network A does not allow connections to the Internet using http and https. However, connections from network A to the Internet via SMTP are allowed.
+- Network B, on the other hand, also allows Internet access via http and https, so the client tunnels from network A to network B using e-mails.
+- The e-mails contain requests directed to an http- or https-based web server.
+- The server in network B extracts the requests from the e-mails and forwards them to an HTTPS proxy. All responses from the web server are passed on to the server by the HTTPS proxy.
+- The server sends the responses packaged in emails back to the client in network A.
+However, so far only the solution where you connect to a server in the same network has been tested. Furthermore, the following setup of the lab environment also only deals with the already tested solution approach.
 
 Setting up the lab environment: 
 - Follow this to install Postfix: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-on-ubuntu-20-04.
