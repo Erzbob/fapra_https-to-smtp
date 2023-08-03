@@ -4,6 +4,7 @@ This project was developed in the course of an internship at the Fernuni Hagen. 
 - The e-mails contain requests directed to an http- or https-based web server.
 - The server in network B extracts the requests from the e-mails and forwards them to an HTTPS proxy. All responses from the web server are passed on to the server by the HTTPS proxy.
 - The server sends the responses packaged in emails back to the client in network A.
+
 However, so far only the solution where you connect to a server in the same network has been tested. Furthermore, the following setup of the lab environment also only deals with the already tested solution approach.
 
 Setting up the lab environment: 
@@ -18,12 +19,14 @@ Start the setup:
   - The port where tinyproxy is listening (8888 by default),
   - the username and password for the user logged into the server machine and
   - the email addresses of the communication partners.
+  
   Username and password are needed for authentication with the IMAP server.
 - In Firefox in the network settings enter "localhost" as proxy for http and https and an unused port, e.g. 8000.
 - Start browser_side.py via a terminal at the client. Use the option -h or --help to show a list of all available options. At startup, pass parameters:
   - The port from the previous step (8000 by default),
   - the username and password for the user logged into the client machine and
   - the email addresses of the communication partners.
+  
   Username and password are needed for authentication with the IMAP server.
 
 Browse the internet:
