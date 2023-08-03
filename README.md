@@ -8,14 +8,14 @@ Setting up the lab environment:
 - Configure the firewall on both machines to allow Postfix and Courier IMAP. If you use "ufw" as a firewall, the terminal commands "sudo ufw allow postfix" and "sudo ufw allow imap" does the trick.
 
 Start the setup:
-- Start https_proxy_side.py via a terminal at the server. At startup, pass parameters:
+- Start https_proxy_side.py via a terminal at the server. Use the option -h or --help to show a list of all available options. At startup, pass parameters:
   - The port where tinyproxy is listening (8888 by default),
   - the username and password for the user logged into the server machine and
   - the email addresses of the communication partners.
   Username and password are needed for authentication with the IMAP server.
 - In Firefox in the network settings enter "localhost" as proxy for http and https and an unused port, e.g. 8000.
-- Start browser_side.py via a terminal at the client. At startup, pass parameters:
-  - The port from the previous step,
+- Start browser_side.py via a terminal at the client. Use the option -h or --help to show a list of all available options. At startup, pass parameters:
+  - The port from the previous step (8000 by default),
   - the username and password for the user logged into the client machine and
   - the email addresses of the communication partners.
   Username and password are needed for authentication with the IMAP server.
