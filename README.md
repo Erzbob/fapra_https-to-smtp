@@ -21,9 +21,9 @@ Start the setup:
   - the email addresses of the communication partners.
   
   Username and password are needed for authentication with the IMAP server.
-- In Firefox in the network settings enter "localhost" as proxy for http and https and an unused port, e.g. 8000.
+- At the client machine, in Firefox' network settings enter "localhost" as proxy for http and https and an unused port, e.g. 8000.
 - Start browser_side.py via a terminal at the client machine. Use the option -h or --help to show a list of all available options. At startup, pass parameters:
-  - The port from the previous step (8000 by default),
+  - The unused port from the previous step (8000 by default),
   - the username and password for the user logged into the client machine and
   - the email addresses of the communication partners.
   
