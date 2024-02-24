@@ -11,7 +11,7 @@ Setting up the lab environment:
 - Follow this to install Postfix: https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-postfix-on-ubuntu-20-04.
 - Follow this to install Courier IMAP: https://docs.gitlab.com/ee/administration/reply_by_email_postfix_setup.html
 - On the client machine, install Postfix as the email server and Courier IMAP (both from the apt of your Debian based Linux distribution). Configure Postfix' main.cf file so that the server is entered as relay host to which e-mails are forwarded. Use Firefox as your web browser.
-- On the server machine, install Postfix and Courier IMAP as you did for the client. The client is entered here as the relay host in Postfix' main.cf file. On the server you must also install the HTTPS proxy "Tinyproxy". Tinyproxy is also available via the apt.
+- On the server machine, install Postfix and Courier IMAP as you did for the client. The client is entered here as the relay host in Postfix' main.cf file. On the server you must also install the HTTPS proxy "Tinyproxy". Tinyproxy is available from here https://github.com/tinyproxy or via the apt.
 - Configure the firewall on both machines to allow Postfix and Courier IMAP. If you use "ufw" as a firewall, the terminal commands "sudo ufw allow postfix" and "sudo ufw allow imap" does the trick.
 
 Start the setup:
